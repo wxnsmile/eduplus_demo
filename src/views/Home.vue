@@ -1,18 +1,44 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <el-button @click="getData">获取数据</el-button>
+    <el-table
+      v-if="list && list.bizData && list.bizData.allSchool.length > 0"
+      :data="list.bizData.allSchool"
+      style="width: 100%">
+      <el-table-column
+        prop="schoolName"
+        label="学校名称"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="creator"
+        label="创建者">
+      </el-table-column>
+      <el-table-column
+        prop="address"
+        label="地址"
+        width="180">
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "home",
-  components: {
-    HelloWorld
+  data() {
+    return {
+      list: {}
+    }
+  },
+  methods: {
+    async getData() {
+      this.list = await this.$http.post(`/zl_api/kidscare/user/getUserAllSchool?token=${this.getSg('saas_token')}`, {}, {})
+      .catch(e => {
+        console.log('登录失败')
+        this.loading = false;
+      });
+    }
   }
 };
 </script>

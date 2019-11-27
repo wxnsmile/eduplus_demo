@@ -1,0 +1,87 @@
+.el-header {
+    height: 64px !important;
+    background: $theme-blue;
+    display: flex;
+    align-items: center;
+}
+.el-tabs {
+    &__header {
+        padding: 0;
+        margin: 0;
+    }
+    &__nav-wrap {
+        margin-bottom: 0;
+        &:after {
+            content: none;
+        }
+    }
+    &__item {
+        color: #b4ddff;
+        font-size: 16px;
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        padding: 0 16px;
+        font-weight: 500;
+        
+    }
+    &__item:nth-child(2), &__item:last-child {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+    &__active-bar {
+        display: none;
+    }
+    .is-active {
+        color: #fff;
+        background: #0082e9;
+    }
+}
+
+.el-container {
+    display: flex;
+    height: calc(100% - 64px);
+    .el-aside {
+        width: 200px !important;
+        background: #fff;
+    }
+    .container-right {
+        flex: 1;
+        .el-breadcrumb {
+            height: 48px;
+            line-height: 48px;
+            padding-left: 48px;
+        }
+        .el-main {
+            height: calc(100% - 50px);
+            padding: 24px;
+            background: #f2f2f2;
+            > div {
+                min-height: calc(100% - 48px);
+                background: #fff;
+                padding: 24px;
+                // 一种向内偏移24px
+                // 块状结构不偏移
+            }
+        }
+    }
+}
+
+.el-menu {
+    border-right: none;
+    &-item {
+        &:focus {
+            background: #ecf5ff;
+        }
+    }
+    
+}
+.el-submenu {
+    .el-menu-item {
+        height: 40px;
+        line-height: 40px;
+    }
+    .is-active {
+        background: #ecf5ff;
+    }
+}

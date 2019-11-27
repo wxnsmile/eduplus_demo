@@ -1,0 +1,151 @@
+
+.font-bold {
+    font-weight: bold;
+}
+.p24 {
+    padding: 24px;
+}
+
+.pt24 {
+    padding-top: 24px;
+}
+
+.pr24 {
+    padding-right: 24px;
+}
+
+.pb24 {
+    padding-bottom: 24px;
+}
+
+.pl24 {
+    padding-left: 24px;
+}
+
+.p16 {
+    padding: 16px;
+}
+
+.pt16 {
+    padding-top: 16px;
+}
+
+.pr16 {
+    padding-right: 16px;
+}
+
+.pb16 {
+    padding-bottom: 16px;
+}
+
+.pl16 {
+    padding-left: 16px;
+}
+
+.p8 {
+    padding: 8px;
+}
+
+.pt8 {
+    padding-top: 8px;
+}
+
+.pr8 {
+    padding-right: 8px;
+}
+
+.pb8 {
+    padding-bottom: 8px;
+}
+
+.pl8 {
+    padding-left: 8px;
+}
+
+
+.m24 {
+    margin: 24px;
+}
+
+.mt24 {
+    margin-top: 24px;
+}
+
+.mr24 {
+    margin-right: 24px;
+}
+
+.mb24 {
+    margin-bottom: 24px;
+}
+
+.ml24 {
+    margin-left: 24px;
+}
+
+.m16 {
+    margin: 16px;
+}
+
+.mt16 {
+    margin-top: 16px;
+}
+
+.mr16 {
+    margin-right: 16px;
+}
+
+.mb16 {
+    margin-bottom: 16px;
+}
+
+.ml16 {
+    margin-left: 16px;
+}
+
+.m8 {
+    margin: 8px;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.mr8 {
+    margin-right: 8px;
+}
+
+.mb8 {
+    margin-bottom: 8px;
+}
+
+.ml8 {
+   margin-left: 8px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.custom-modal-wrap {
+    z-index: 2000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+.custom-modal-body {
+    position: relative;
+    overflow: hidden;
+    left: 50%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
